@@ -1,10 +1,10 @@
 
 <?php
-
-define('DB_SERVER', 'bqvkxucejn9m8q2b9l3j-mysql.services.clever-cloud.com');
-define('DB_USERNAME', 'uuxm51iy6cohxzkq');
-define('DB_PASSWORD', 'w8DNyQ7JOqmBSHQ3n0jk');
-define('DB_NAME', 'bqvkxucejn9m8q2b9l3j');
+//3@-L7rJC$//MAYH?
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'id16448666_sergio');
+define('DB_PASSWORD', '3@-L7rJC$//MAYH?');
+define('DB_NAME', 'id16448666_mysqlnotepaddb');
  
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
@@ -12,6 +12,5 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 ?>
-
 
 
