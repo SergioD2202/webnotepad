@@ -77,6 +77,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             
             if(mysqli_stmt_execute($stmt)){
+
+                $query="SELECT id_user FROM user WHERE username = '$param_username'";
+                $idsearch = $link->query($query);
+                if (!$idsearch) {
+                    printf("Query failed: %s\n", $link->error);
+                    return 0;
+                    }      
+                    while($row = $idsearch->fetch_row()) {
+                      $rows[]=$row;
+                      }
+                  
+                      $idregister = $rows[0][0];
+                      $second_query="INSERT INTO folder (id_folder,   name_folder, id_user, id_parent) VALUES (NULL, 'root', '$idregister' , NULL);";
+                      $idsearch = $link->query($second_query);
+                    if (!$idsearch) {
+                    printf("Query failed: %s\n", $link->error);
+                    return 0;
+                    }  
+
                 
                   
                 header("location: index.php");
