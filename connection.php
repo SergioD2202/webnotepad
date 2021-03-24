@@ -1,7 +1,7 @@
 
 <?php
 //3@-L7rJC$//MAYH?
-define('DB_SERVER', 'localhost');
+define('DB_SERVER', 'https://databases.000webhost.com');
 define('DB_USERNAME', 'id16448666_sergio');
 define('DB_PASSWORD', '3@-L7rJC$//MAYH?');
 define('DB_NAME', 'id16448666_mysqlnotepaddb');
