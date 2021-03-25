@@ -14,3 +14,17 @@ function deleteNote(){
 
     }
 }
+
+//Exportar nota
+function expNote(){
+    let name = document.querySelector(".name-note").value;
+    let content = document.querySelector(".content").value;
+
+    if(name==="") alert("No puede estar el nombre vacío")
+
+    else{
+        let blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+        saveAs(blob, name+".txt");
+    }   
+    
+}

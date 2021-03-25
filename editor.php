@@ -93,7 +93,7 @@ if (mysqli_connect_errno()) {
             <input type="submit" class="btn btn-primary" value="Guardar">
             
          
-          <a href="export.php" class="btn btn-info">Exportar</a>
+          <input type="button" class="btn btn-info" value="Exportar" onclick="expNote()">
           <input type="button" class="btn btn-danger" value="Borrar" onclick="deleteNote()">
           </form>
     </div>
