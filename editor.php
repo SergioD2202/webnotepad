@@ -51,7 +51,7 @@ if (mysqli_connect_errno()) {
             printf("Query failed: %s\n", $link->error);
             exit;
             } 
-            header("editor.php"); 
+            header("Refresh:0"); 
             }
             catch(Exception $ex){
                 echo "error";
