@@ -93,11 +93,32 @@ if (mysqli_connect_errno()) {
             <input type="submit" class="btn btn-primary" value="Guardar">
             
          
-          <input type="button" class="btn btn-info" value="Exportar" onclick="expNote()">
+          <input type="button" class="btn btn-info exp" value="Exportar" onclick="expNote()">
           <input type="button" class="btn btn-danger" value="Borrar" onclick="deleteNote()">
           </form>
     </div>
-
     <script src="script-two.js"></script>
+    <script>
+        //Exportar nota
+        function expNote(){
+            var name = document.querySelector(".name-note").value;
+            var content = document.querySelector(".content").value;
+
+            if(name==="") alert("No puede estar el nombre vacío")
+
+        else{
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+             element.setAttribute('download', name);
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+                }   
+        }
+    </script>
 </body>
 </html>
